@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bank_app_navigation"
+    app:startDestination="@id/start_page">
+    <fragment
+        android:id="@+id/start_page"
+        android:name="com.example.courseworkapp.start_page"
+        android:label="fragment_start_page"
+        tools:layout="@layout/fragment_start_page" >
+        <action
+            android:id="@+id/action_start_page_to_dashboard"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_start_page_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.courseworkapp.dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_account_profile"
+            app:destination="@id/account_profile" />
+        <action
+            android:id="@+id/action_dashboard_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.courseworkapp.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/account_profile"
+        android:name="com.example.courseworkapp.account_profile"
+        android:label="fragment_account_profile"
+        tools:layout="@layout/fragment_account_profile" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.courseworkapp.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/exchange"
+        android:name="com.example.courseworkapp.exchange"
+        android:label="fragment_exchange"
+        tools:layout="@layout/fragment_exchange" >
+        <action
+            android:id="@+id/action_exchange_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/atm_finder"
+        android:name="com.example.courseworkapp.atm_finder"
+        android:label="fragment_atm_finder"
+        tools:layout="@layout/fragment_atm_finder" >
+        <action
+            android:id="@+id/action_atm_finder_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/transfer"
+        android:name="com.example.courseworkapp.transfer"
+        android:label="fragment_transfer"
+        tools:layout="@layout/fragment_transfer" >
+        <action
+            android:id="@+id/action_transfer_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+</navigation>
